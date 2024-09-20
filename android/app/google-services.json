@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:475877209796:android:aa343b887f80a622563b91",
+        "mobilesdk_app_id": "1:475877209796:android:4791b47ffe9d3856563b91",
         "android_client_info": {
-          "package_name": "com.ionic.netflix"
+          "package_name": "com.ionic.starter"
         }
       },
       "oauth_client": [],

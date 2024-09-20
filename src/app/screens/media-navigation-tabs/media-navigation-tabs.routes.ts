@@ -5,7 +5,7 @@ import { AuthGuard } from '@guards/auth.guard';
 export const mediaNavigationRoutes: Routes = [
   {
     path: '',
-    loadComponent: () => import('@screens/media-navigation-tabs/media-navigation-tabs.page').then(m => m.MediaNavigationTabsComponent),
+    loadComponent: () => import('@screens/media-navigation-tabs/media-navigation-tabs.page').then(m => m.MediaNavigationTabsPage),
     canActivateChild: [AuthGuard],
     children: [
       {

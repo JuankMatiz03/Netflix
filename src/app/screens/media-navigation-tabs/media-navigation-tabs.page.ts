@@ -21,7 +21,7 @@ import {
     IonLabel
   ],
 })
-export class MediaNavigationTabsComponent {
+export class MediaNavigationTabsPage {
 
   public environmentInjector = inject(EnvironmentInjector);
 
