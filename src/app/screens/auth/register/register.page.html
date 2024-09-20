@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="container">
+    <form [formGroup]="form" (ngSubmit)="onRegister()">
+      <ion-item>
+        <ion-label position="floating">Name</ion-label>
+        <ion-input type="name" formControlName="name"></ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="form.get('name')?.invalid && form.get('name')?.touched">
+        Enter a valid name
+      </ion-text>
+
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" formControlName="email"></ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+        Enter a valid email
+      </ion-text>
+
+      <ion-item>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" formControlName="password">
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="form.get('password')?.invalid && form.get('password')?.touched">
+        Password is required
+      </ion-text>
+
+      <ion-item>
+        <ion-label position="floating">Confirm password</ion-label>
+        <ion-input type="password" formControlName="confirmPassword">
+          <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+        </ion-input>
+      </ion-item>
+      <ion-text color="danger" *ngIf="form.hasError('passwordsMismatch') && form.get('confirmPassword')?.touched">
+        Passwords do not match
+      </ion-text>
+
+      <ion-button expand="block" type="submit" [disabled]="form.invalid">Register</ion-button>
+    </form>
+
+    <div class="ion-text-center">
+      <ion-button fill="clear" (click)="goToLogin()">Login</ion-button>
+    </div>
+  </div>
+</ion-content>

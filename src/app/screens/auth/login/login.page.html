@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" [fullscreen]="true">
+    <div class="container">
+      <form [formGroup]="form" (ngSubmit)="onLogin()" novalidate>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" formControlName="email"></ion-input>
+        </ion-item>
+        <ion-text color="danger" *ngIf="form.get('email')?.invalid && form.get('email')?.touched">
+          Enter a valid email
+        </ion-text>
+
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" formControlName="password">
+            <ion-input-password-toggle slot="end"></ion-input-password-toggle>
+          </ion-input>
+        </ion-item>
+        <ion-text color="danger" *ngIf="form.get('password')?.invalid && form.get('password')?.touched">
+          Password is required.
+        </ion-text>
+
+
+        <ion-button expand="block" type="submit" [disabled]="form.invalid">Login</ion-button>
+      </form>
+
+      <div class="ion-text-center">
+        <ion-button fill="clear" (click)="goToRegister()">Register</ion-button>
+        <ion-button fill="clear" (click)="goToRecoverPassword()">Recovery Password</ion-button>
+      </div>
+    </div>
+</ion-content>

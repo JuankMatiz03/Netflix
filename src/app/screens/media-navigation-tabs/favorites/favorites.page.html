@@ -1,0 +1,13 @@
+<ion-content fullscreen="true">
+  <app-search-and-movies
+    *ngIf="movies.length > 0; else noData"
+    [moviesInput]="movies"
+    (movieSelected)=" movieSelected($event)">
+  </app-search-and-movies>
+
+  <ng-template #noData>
+    <app-no-data></app-no-data>
+  </ng-template>
+</ion-content>
+
+

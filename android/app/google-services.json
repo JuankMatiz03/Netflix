@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "475877209796",
+    "project_id": "netflix-267c7",
+    "storage_bucket": "netflix-267c7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:475877209796:android:aa343b887f80a622563b91",
+        "android_client_info": {
+          "package_name": "com.ionic.netflix"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoKJ3c8716NO-j0PD1zkxS7P01AzV7qBA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

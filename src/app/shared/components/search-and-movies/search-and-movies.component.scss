@@ -1,0 +1,57 @@
+.content {
+  padding: 16px;
+  background: #f9f9f9;
+}
+
+.movie-card {
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.movie-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px 12px 0 0;
+}
+
+.search-bar {
+  margin-bottom: 16px;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skeleton-container {
+  padding: 16px;
+
+  .skeleton-image {
+    height: 200px;
+    width: 100%;
+    border-radius: 12px;
+  }
+
+  .skeleton-title {
+    height: 20px;
+    width: 80%;
+    margin-top: 8px;
+  }
+
+  .skeleton-subtitle {
+    height: 15px;
+    width: 60%;
+    margin-top: 4px;
+  }
+}
+
+.skeleton-card {
+  margin: 8px;
+}

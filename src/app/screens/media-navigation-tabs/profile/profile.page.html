@@ -1,0 +1,8 @@
+<ion-content [fullscreen]="true" class="profile-content">
+  <div class="profile-container">
+    <h2 class="welcome-message">{{ getWelcomeMessage() }}, {{ userName }}!</h2>
+    <ion-button expand="full" color="danger" class="logout-button" (click)="logout()">
+      Cerrar Sesión
+    </ion-button>
+  </div>
+</ion-content>
